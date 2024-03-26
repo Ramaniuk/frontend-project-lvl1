@@ -1,3 +1,3 @@
-import { calc } from "../src/calc.js";
+import { playCalc } from "../games/playCalc.js";
 
-calc();
+playCalc();
