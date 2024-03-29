@@ -4,7 +4,7 @@ install:
 start-calc:
 	node bin/brain-calc.js	
 
-start-even:
+brain-even:
 	node bin/brain-even.js	
 
 start-gcd:

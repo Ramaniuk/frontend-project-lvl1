@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import { greeting, playGame, defineNumbers } from "../src/index.js";
 
 const gameRules = () => {
