@@ -11,7 +11,9 @@
     "brain-games": "bin/brain-games.js",
     "brain-even": "bin/brain-even.js",
     "brain-calc": "brain-calc.js",
-    "brain-gcd": "brain-gcd.js"
+    "brain-gcd": "brain-gcd.js",
+    "brain-progression": "brain-progression.js",
+    "brain-prime": "brain-prime.js"
   },
   "author": "",
   "license": "ISC",
