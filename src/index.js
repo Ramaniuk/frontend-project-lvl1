@@ -7,6 +7,12 @@ export const greeting = () => {
   return name;
 };
 
+export const defineNumbers = (end, start = 0) => {
+  // let number = Math.floor(Math.random() * num);
+  let number = Math.floor(Math.random() * (end - start)) + start;
+  return number;
+};
+
 // get response from Player
 const playerAnswer = () => {
   const answer = readlineSync.question("Your answer: ");

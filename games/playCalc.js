@@ -1,12 +1,7 @@
-import { greeting, playGame } from "../src/index.js";
+import { greeting, playGame, defineNumbers } from "../src/index.js";
 
 const gameRules = () => {
   console.log(`What is the result of the expression?`);
-};
-
-const defineNumbers = () => {
-  let number = Math.floor(Math.random() * 100);
-  return number;
 };
 
 const defineSign = () => {
@@ -17,15 +12,15 @@ const defineSign = () => {
 };
 
 const defineQuestionForCalc = () => {
-  let numOne = defineNumbers();
-  let numTwo = defineNumbers();
+  let numOne = defineNumbers(101);
+  let numTwo = defineNumbers(101);
   let sign = defineSign();
   const question = `${numOne} ${sign} ${numTwo}`;
   console.log(`Question: ${question}`);
   return [numOne, numTwo, sign];
 };
 
-const correctAnswer = (array) => {
+const correctAnswerForCalc = (array) => {
   let result = 0;
   switch (array[2]) {
     case "+":
@@ -41,10 +36,9 @@ const correctAnswer = (array) => {
   return result;
 };
 
-const playOneRound = () => {
+const playOneRoundForCalc = () => {
   const questionForRound = defineQuestionForCalc();
-  const correctAnswerForRound = correctAnswer(questionForRound);
-  // console.log("0la", questionForRound, correctAnswerForRound);
+  const correctAnswerForRound = correctAnswerForCalc(questionForRound);
   return [questionForRound, correctAnswerForRound];
 };
 
@@ -52,5 +46,5 @@ export const playCalc = () => {
   let name = greeting();
   gameRules();
 
-  playGame(playOneRound, name);
+  playGame(playOneRoundForCalc, name);
 };
