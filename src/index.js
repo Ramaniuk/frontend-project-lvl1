@@ -25,7 +25,7 @@ const displayResults = (playerAnswer, correctAnswer, name) => {
     return true;
   } else {
     console.log(
-      `${playerAnswer} is wrong answer ;(. Correct answer was ${correctAnswer}.\nLet's try again, ${name}`
+      `${playerAnswer} is wrong answer ;(. Correct answer was ${correctAnswer}.\nLet's try again, ${name}!`
     );
     return false;
   }
