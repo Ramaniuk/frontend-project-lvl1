@@ -1,20 +1,8 @@
 install:
 	npm ci
 
-start-calc:
-	node bin/brain-calc.js	
-
-brain-even:
-	node bin/brain-even.js	
-
-start-gcd:
-	node bin/brain-gcd.js	
-
-start-progression:
-	node bin/brain-progression.js	
-
-start-prime:
-	node bin/brain-prime.js
+start:
+	node bin/brain-games.js	
 
 publish:
 	npm publish --dry-run	
