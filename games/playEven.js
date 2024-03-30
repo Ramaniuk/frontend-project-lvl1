@@ -2,7 +2,7 @@
 import { greeting, playGame, defineNumbers } from "../src/index.js";
 
 const gameRules = () => {
-  console.log("Answer 'yes' if the number is even, otherwise answer 'no'.");
+  console.log('Answer "yes" if the number is even, otherwise answer "no".');
 };
 
 const defineQuestionForEven = () => {
