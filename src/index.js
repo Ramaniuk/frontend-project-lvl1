@@ -35,6 +35,7 @@ const displayResults = (playerAnswer, correctAnswer, name) => {
 // cycle with questions and answers
 export const playGame = (playOneRound, name) => {
   let count = 3;
+  let correctAnswersForGame = 0;
 
   while (count > 0) {
     let dataForOneRound = playOneRound();
@@ -48,8 +49,10 @@ export const playGame = (playOneRound, name) => {
 
     if (resultForRound === true) {
       count--;
+      correctAnswersForGame++;
     } else {
       count = 0;
     }
   }
+  if (correctAnswersForGame === 3) console.log(`Congratulations, ${name}!`);
 };
