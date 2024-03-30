@@ -21,17 +21,12 @@ const defineArrayForProgression = () => {
       arr.push("..");
     }
   }
-  console.log(`Question: ${arr}`);
+  console.log(`Question: ${arr.join(" ")}`);
   return arr;
 };
 
 const correctAnswerForProgression = (array) => {
   const arrayBlankIndex = array.indexOf("..");
-  // console.log(
-  //   arrayBlankIndex,
-  //   array[arrayBlankIndex - 1],
-  //   array[arrayBlankIndex + 1]
-  // );
   const missingNum = array[arrayBlankIndex + 1]
     ? (array[arrayBlankIndex + 1] + array[arrayBlankIndex - 1]) / 2
     : array[arrayBlankIndex - 1] +
