@@ -21,13 +21,13 @@ const playerAnswer = () => {
 };
 
 const displayResults = (answer, correctAnswer, name) => {
-  if (Number(answer)) answer = Number(answer);
-  if (answer === correctAnswer) {
+  let playerAnswer = Number(answer) ? Number(answer) : answer;
+  if (playerAnswer === correctAnswer) {
     console.log('Correct!');
     return true;
   }
   console.log(
-    `${answer} is wrong answer ;(. Correct answer was ${correctAnswer}.\nLet's try again, ${name}!`,
+    `${playerAnswer} is wrong answer ;(. Correct answer was ${correctAnswer}.\nLet's try again, ${name}!`,
   );
   return false;
 };
