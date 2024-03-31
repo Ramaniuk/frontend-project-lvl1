@@ -20,13 +20,13 @@ const playerAnswer = () => {
   return answer;
 };
 
-const displayResults = (playerAnswer, correctAnswer, name) => {
-  if (playerAnswer == correctAnswer) {
+const displayResults = (answer, correctAnswer, name) => {
+  if (answer == correctAnswer) {
     console.log('Correct!');
     return true;
   }
   console.log(
-    `${playerAnswer} is wrong answer ;(. Correct answer was ${correctAnswer}.\nLet's try again, ${name}!`
+    `${answer} is wrong answer ;(. Correct answer was ${correctAnswer}.\nLet's try again, ${name}!`
   );
   return false;
 };
@@ -47,7 +47,7 @@ export const playGame = (playOneRound, name) => {
     );
 
     if (resultForRound === true) {
-      count = count - 1;
+      count -= 1;
       correctAnswersForGame += 1;
     } else {
       count = 0;
