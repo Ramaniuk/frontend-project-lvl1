@@ -2,7 +2,7 @@
 import { greeting, playGame, defineNumbers } from '../src/index.js';
 
 const gameRules = () => {
-  console.log(`Find the greatest common divisor of given numbers.`);
+  console.log('Find the greatest common divisor of given numbers.');
 };
 
 const defineQuestionForGcd = () => {
@@ -16,8 +16,8 @@ const defineQuestionForGcd = () => {
 const correctAnswer = (array) => {
   let a = array[0];
   let b = array[1];
-  //algorithm euclid
-  while ((a !== 0) & (b !== 0)) {
+  /*algorithm euclid*/
+  while (a !== 0 && b !== 0) {
     if (a > b) {
       a = a % b;
     } else {
