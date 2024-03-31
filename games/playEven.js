@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { greeting, playGame, defineNumbers } from "../src/index.js";
+import { greeting, playGame, defineNumbers } from '../src/index.js';
 
 const gameRules = () => {
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
@@ -13,10 +13,9 @@ const defineQuestionForEven = () => {
 
 const correctAnswerForEven = (number) => {
   if (number % 2 === 0) {
-    return "yes";
-  } else {
-    return "no";
+    return 'yes';
   }
+  return 'no';
 };
 
 const playOneRoundForEven = () => {
@@ -26,7 +25,7 @@ const playOneRoundForEven = () => {
 };
 
 export const playEven = () => {
-  let name = greeting();
+  const name = greeting();
   gameRules();
 
   playGame(playOneRoundForEven, name);

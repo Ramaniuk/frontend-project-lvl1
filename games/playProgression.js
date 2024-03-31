@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { greeting, playGame, defineNumbers } from "../src/index.js";
+import { greeting, playGame, defineNumbers } from '../src/index.js';
 
 const gameRules = () => {
   console.log(`What number is missing in the progression?`);
@@ -18,15 +18,15 @@ const defineArrayForProgression = () => {
     if (i !== arrayBlankIndex) {
       arr.push(numberToAdd);
     } else {
-      arr.push("..");
+      arr.push('..');
     }
   }
-  console.log(`Question: ${arr.join(" ")}`);
+  console.log(`Question: ${arr.join(' ')}`);
   return arr;
 };
 
 const correctAnswerForProgression = (array) => {
-  const arrayBlankIndex = array.indexOf("..");
+  const arrayBlankIndex = array.indexOf('..');
   const missingNum = array[arrayBlankIndex + 1]
     ? (array[arrayBlankIndex + 1] + array[arrayBlankIndex - 1]) / 2
     : array[arrayBlankIndex - 1] +
@@ -42,7 +42,7 @@ const playOneRound = () => {
 };
 
 export const playProgression = () => {
-  let name = greeting();
+  const name = greeting();
   gameRules();
 
   playGame(playOneRound, name);
