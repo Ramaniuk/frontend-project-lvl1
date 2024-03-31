@@ -29,9 +29,9 @@ const correctAnswerForProgression = (array) => {
   const arrayBlankIndex = array.indexOf('..');
   const missingNum = array[arrayBlankIndex + 1]
     ? (array[arrayBlankIndex + 1] + array[arrayBlankIndex - 1]) / 2
-    : array[arrayBlankIndex - 1] +
-      array[arrayBlankIndex - 1] -
-      array[arrayBlankIndex - 2];
+    : array[arrayBlankIndex - 1]
+      + array[arrayBlankIndex - 1]
+      - array[arrayBlankIndex - 2];
   return missingNum;
 };
 

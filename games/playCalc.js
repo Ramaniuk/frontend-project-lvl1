@@ -34,6 +34,8 @@ const correctAnswerForCalc = (array) => {
     case '*':
       result = array[0] * array[1];
       break;
+    default:
+      ; 
   }
   return result;
 };
