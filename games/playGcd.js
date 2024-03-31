@@ -14,8 +14,8 @@ const defineQuestionForGcd = () => {
 };
 
 const correctAnswer = (array) => {
-  const a = array[0];
-  const b = array[1];
+  let a = array[0];
+  let b = array[1];
   //algorithm euclid
   //большее число делим на меньшее. если делится без остатка, то меньшее число и есть НОД (следует выйти из цикла). если есть остаток, то большее число заменяем на остаток от деления.
   //переходим к пункту 1.
