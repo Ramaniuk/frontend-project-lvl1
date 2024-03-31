@@ -44,7 +44,7 @@ const playOneRoundForCalc = () => {
 };
 
 export const playCalc = () => {
-  let name = greeting();
+  const name = greeting();
   gameRules();
 
   playGame(playOneRoundForCalc, name);

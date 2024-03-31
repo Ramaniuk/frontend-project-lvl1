@@ -1,28 +1,28 @@
-import readlineSync from "readline-sync";
+import readlineSync from 'readline-sync';
 
 // greeting
 export const greeting = () => {
-  console.log("Welcome to the Brain Games!");
-  const name = readlineSync.question("May I have your name?: ");
+  console.log('Welcome to the Brain Games!');
+  const name = readlineSync.question('May I have your name?: ');
   console.log(`Hello, ${name}!`);
   return name;
 };
 
 export const defineNumbers = (end, start = 0) => {
   // let number = Math.floor(Math.random() * num);
-  let number = Math.floor(Math.random() * (end - start)) + start;
+  const number = Math.floor(Math.random() * (end - start)) + start;
   return number;
 };
 
 // get response from Player
 const playerAnswer = () => {
-  const answer = readlineSync.question("Your answer: ");
+  const answer = readlineSync.question('Your answer: ');
   return answer;
 };
 
 const displayResults = (playerAnswer, correctAnswer, name) => {
-  if (playerAnswer == correctAnswer) {
-    console.log("Correct!");
+  if (playerAnswer === correctAnswer) {
+    console.log('Correct!');
     return true;
   } else {
     console.log(
@@ -48,7 +48,7 @@ export const playGame = (playOneRound, name) => {
     );
 
     if (resultForRound === true) {
-      count--;
+      count = count - 1;
       correctAnswersForGame++;
     } else {
       count = 0;

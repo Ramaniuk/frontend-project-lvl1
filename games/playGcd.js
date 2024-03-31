@@ -17,14 +17,11 @@ const correctAnswer = (array) => {
   let a = array[0];
   let b = array[1];
   //algorithm euclid
-  //большее число делим на меньшее. если делится без остатка, то меньшее число и есть НОД (следует выйти из цикла). если есть остаток, то большее число заменяем на остаток от деления.
-  //переходим к пункту 1.
   while ((a !== 0) & (b !== 0)) {
     if (a > b) {
-      //если а больше б, то а присваиваем а/б
       a = a % b;
     } else {
-      b = b % a; //наоборот
+      b = b % a;
     }
   }
   return a + b;
@@ -37,7 +34,7 @@ const playOneRound = () => {
 };
 
 export const playGcd = () => {
-  let name = greeting();
+  const name = greeting();
   gameRules();
 
   playGame(playOneRound, name);
