@@ -26,7 +26,7 @@ const displayResults = (answer, correctAnswer, name) => {
     return true;
   }
   console.log(
-    `${answer} is wrong answer ;(. Correct answer was ${correctAnswer}.\nLet's try again, ${name}!`
+    `${answer} is wrong answer ;(. Correct answer was ${correctAnswer}.\nLet's try again, ${name}!`,
   );
   return false;
 };
@@ -43,7 +43,7 @@ export const playGame = (playOneRound, name) => {
     const resultForRound = displayResults(
       getAnswerFromPlayer,
       dataForOneRound[1],
-      name
+      name,
     );
 
     if (resultForRound === true) {

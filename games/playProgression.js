@@ -13,7 +13,7 @@ const defineArrayForProgression = () => {
   // console.log(arrayLength, firstNumber, progresStep, arrayBlankIndex);
   const arr = [firstNumber];
   let numberToAdd = firstNumber;
-  for (let i = 1; i < arrayLength; i = i + 1) {
+  for (let i = 1; i < arrayLength; i += 1) {
     numberToAdd += progresStep;
     if (i !== arrayBlankIndex) {
       arr.push(numberToAdd);
