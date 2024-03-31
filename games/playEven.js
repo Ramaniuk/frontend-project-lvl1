@@ -24,9 +24,11 @@ const playOneRoundForEven = () => {
   return [questionForRound, correctAnswerForRound];
 };
 
-export const playEven = () => {
+const playEven = () => {
   const name = greeting();
   gameRules();
 
   playGame(playOneRoundForEven, name);
 };
+
+export default playEven;

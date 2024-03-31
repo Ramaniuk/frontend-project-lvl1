@@ -13,15 +13,15 @@ const defineQuestionForGcd = () => {
   return [numOne, numTwo];
 };
 
+//  algorithm euclid
 const correctAnswer = (array) => {
   let a = array[0];
   let b = array[1];
-  /*algorithm euclid*/
   while (a !== 0 && b !== 0) {
     if (a > b) {
-      a = a % b;
+      a %= b;
     } else {
-      b = b % a;
+      b %= a;
     }
   }
   return a + b;
@@ -33,9 +33,11 @@ const playOneRound = () => {
   return [questionForRound, correctAnswerForRound];
 };
 
-export const playGcd = () => {
+const playGcd = () => {
   const name = greeting();
   gameRules();
 
   playGame(playOneRound, name);
 };
+
+export default playGcd;

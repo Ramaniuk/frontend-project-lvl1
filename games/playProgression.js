@@ -2,7 +2,7 @@
 import { greeting, playGame, defineNumbers } from '../src/index.js';
 
 const gameRules = () => {
-  console.log(`What number is missing in the progression?`);
+  console.log('What number is missing in the progression?');
 };
 
 const defineArrayForProgression = () => {
@@ -13,7 +13,7 @@ const defineArrayForProgression = () => {
   // console.log(arrayLength, firstNumber, progresStep, arrayBlankIndex);
   const arr = [firstNumber];
   let numberToAdd = firstNumber;
-  for (let i = 1; i < arrayLength; i++) {
+  for (let i = 1; i < arrayLength; i = i + 1) {
     numberToAdd += progresStep;
     if (i !== arrayBlankIndex) {
       arr.push(numberToAdd);
@@ -41,9 +41,11 @@ const playOneRound = () => {
   return [questionForRound, correctAnswerForRound];
 };
 
-export const playProgression = () => {
+const playProgression = () => {
   const name = greeting();
   gameRules();
 
   playGame(playOneRound, name);
 };
+
+export default playProgression;

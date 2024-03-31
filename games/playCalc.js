@@ -2,7 +2,7 @@
 import { greeting, playGame, defineNumbers } from '../src/index.js';
 
 const gameRules = () => {
-  console.log(`What is the result of the expression?`);
+  console.log('What is the result of the expression?');
 };
 
 const defineSign = () => {
@@ -43,9 +43,11 @@ const playOneRoundForCalc = () => {
   return [questionForRound, correctAnswerForRound];
 };
 
-export const playCalc = () => {
+const playCalc = () => {
   const name = greeting();
   gameRules();
 
   playGame(playOneRoundForCalc, name);
 };
+
+export default playCalc;

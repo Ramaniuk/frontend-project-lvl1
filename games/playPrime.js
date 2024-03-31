@@ -28,9 +28,11 @@ const playOneRound = () => {
   return [questionForRound, correctAnswerForRound];
 };
 
-export const playPrime = () => {
+const playPrime = () => {
   const name = greeting();
   gameRules();
 
   playGame(playOneRound, name);
 };
+
+export default playPrime;

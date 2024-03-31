@@ -37,18 +37,18 @@ export const playGame = (playOneRound, name) => {
   let correctAnswersForGame = 0;
 
   while (count > 0) {
-    let dataForOneRound = playOneRound();
-    let getAnswerFromPlayer = playerAnswer();
+    const dataForOneRound = playOneRound();
+    const getAnswerFromPlayer = playerAnswer();
 
-    let resultForRound = displayResults(
+    const resultForRound = displayResults(
       getAnswerFromPlayer,
       dataForOneRound[1],
       name
     );
 
     if (resultForRound === true) {
-      count--;
-      correctAnswersForGame = correctAnswersForGame + 1;
+      count = count - 1;
+      correctAnswersForGame += 1;
     } else {
       count = 0;
     }
