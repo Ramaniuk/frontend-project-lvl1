@@ -23,6 +23,7 @@ const defineQuestionForCalc = () => {
 
 const correctAnswerForCalc = (array) => {
   let result = 0;
+
   switch (array[2]) {
     case '+':
       result = array[0] + array[1];

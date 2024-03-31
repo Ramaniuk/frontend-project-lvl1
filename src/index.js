@@ -21,7 +21,8 @@ const playerAnswer = () => {
 };
 
 const displayResults = (answer, correctAnswer, name) => {
-  if (answer == correctAnswer) {
+  if (Number(answer)) answer = Number(answer);
+  if (answer === correctAnswer) {
     console.log('Correct!');
     return true;
   }
