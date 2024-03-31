@@ -35,7 +35,7 @@ const correctAnswerForCalc = (array) => {
       result = array[0] * array[1];
       break;
     default:
-      ; 
+      break;
   }
   return result;
 };
