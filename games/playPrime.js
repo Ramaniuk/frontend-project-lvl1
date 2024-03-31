@@ -12,11 +12,13 @@ const defineQuestionForPrime = () => {
 };
 
 const correctAnswerForPrime = (num) => {
-  if (num !== 2 && num % 2 === 0) {
-    return "no";
-  } else {
-    return "yes";
+  if (num < 2) return "no";
+  for (let i = 2; i < num; i++) {
+    if (num % i === 0) {
+      return "no";
+    }
   }
+  return "yes";
 };
 
 const playOneRound = () => {
