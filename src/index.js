@@ -21,7 +21,7 @@ const playerAnswer = () => {
 };
 
 const displayResults = (playerAnswer, correctAnswer, name) => {
-  if (playerAnswer === correctAnswer) {
+  if (Number(playerAnswer) === correctAnswer) {
     console.log('Correct!');
     return true;
   } else {
@@ -48,8 +48,8 @@ export const playGame = (playOneRound, name) => {
     );
 
     if (resultForRound === true) {
-      count = count - 1;
-      correctAnswersForGame++;
+      count--;
+      correctAnswersForGame = correctAnswersForGame + 1;
     } else {
       count = 0;
     }
